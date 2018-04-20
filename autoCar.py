@@ -521,8 +521,8 @@ def gameLoop():
             drawMap(mapWall)
             showGameInfo()
             showCarInfo(carLeft, carRight, carFront, car_degree)
-            outputlg4D.append(str(carFront) +' '+ str(carRight) +' '+ str(carLeft) +' '+ str(round(car_degree, 2)))
-            outputlg6D.append(str(car_x) +' '+ str(car_y) +' '+ str(carFront) +' '+ str(carRight) +' '+ str(carLeft) +' '+ str(round(car_degree, 2)))
+            outputlg4D.append(str(carFront/fixX) +' '+ str(carRight/fixX) +' '+ str(carLeft/fixX) +' '+ str(-round(Roal, 2)))
+            outputlg6D.append(str((car_x-zeroX)/fixX) +' '+ str(-(car_y-zeroY)/fixX) +' '+ str(carFront/fixX) +' '+ str(carRight/fixX) +' '+ str(carLeft/fixX) +' '+ str(-round(Roal, 2)))
             if car_x > g1[0] and car_y < g2[1]:
                 with open('log/log4D_'+method+'.txt', 'w') as f:
                     for i in outputlg4D:
